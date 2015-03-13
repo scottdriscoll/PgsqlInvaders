@@ -1,0 +1,33 @@
+{
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/scottdriscoll/symfony-console-helper"
+    }
+  ],
+  "require": {
+    "symfony/console": "*",
+    "symfony/yaml": "2.0.*@dev",
+    "sd/symfony-console-helper": "dev-master",
+    "incenteev/composer-parameter-handler": "2.1.*@dev",
+    "doctrine/dbal": "2.2.*"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+    ],
+    "post-update-cmd": [
+      "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+    ]
+  },
+  "extra": {
+    "incenteev-parameters": {
+      "file": "config/parameters.yml"
+    }
+  },
+  "autoload": {
+    "psr-0": {
+      "": "src/"
+    }
+  }
+}

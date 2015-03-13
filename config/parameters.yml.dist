@@ -1,0 +1,6 @@
+parameters:
+    databases.default.host:     localhost
+    databases.default.port:     5432
+    databases.default.name:     invaders
+    databases.default.user:     postgres
+    databases.default.password: ~
